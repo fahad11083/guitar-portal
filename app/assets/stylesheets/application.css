@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ .topnav {
+    border: 1px;
+    overflow: hidden;
+}
