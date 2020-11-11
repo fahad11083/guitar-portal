@@ -17,3 +17,7 @@
     border: 1px;
     overflow: hidden;
 }
+.topnav a { 
+    float: right;
+    padding-right: 5%;
+}
