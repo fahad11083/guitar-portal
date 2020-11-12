@@ -16,8 +16,15 @@
  .topnav {
     border: 1px;
     overflow: hidden;
+    background-color: whitesmoke;
+    height: 70px;
+    width: 100%;
 }
 .topnav a { 
     float: right;
+    padding: 1%;
     padding-right: 5%;
+    border-right: groove;
+    text-decoration: none;
+    color: black;
 }
