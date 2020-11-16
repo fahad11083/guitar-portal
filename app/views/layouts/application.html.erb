@@ -8,10 +8,18 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
 
-  <body>
+  <body class="container-body">
     <div class="topnav" id="myTopnav">
+    <%= image_tag("guitar-logo.png", class: "guitar-logo") %>
       <% if user_signed_in? %>
         <a href="/users/sign_out" data-method="delete">Logout</a>
         <a href="/carts">Checkout | Count: <%= Cart.cart_count(current_user.id) %> Total: <%= Cart.cart_total(current_user.id) %>$</a>
@@ -20,9 +28,9 @@
         <a href="/users/sign_in">Sign In</a>
         <a href="/users/sign_up">Sign Up</a>
       <% end %>
+      <%= link_to "EXPLORE", products_path %>
+      <%= link_to "Home",root_path %>
     </div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-    <%= yield %>
+     <%= yield %>
   </body>
 </html>

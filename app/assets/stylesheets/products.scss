@@ -1,3 +1,46 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.products {
+  list-style-type: none;
+}
+.product a {
+  text-decoration: none;
+  color: rgb(70, 63, 63);
+}
+.inventory-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.product-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+  width: 700px;
+}
+.product {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-bottom: black 1px;
+  height: 100px;
+  justify-content: space-between;
+  border-bottom: groove 1px;
+  padding: 1%;
+  margin: 1%;
+  .add-cart-button {
+    flex: 1;
+  }
+  .product-title {
+    flex: 1;
+    font-size: 22px;
+  }
+  .cart-icon {
+    font-size:25px
+  }
+}
+.confirm-purchase {
+  margin: auto;
+  margin-left: 28%;
+}

@@ -1,8 +1,14 @@
+<div class="inventory-heading"> 
+  <h2>YOUR CART</h2>
+</div>
+<ul class="product-list">
 <% @products.each do |product| %>
+  <div class="products">
     <li>
-      <div><%= product.name %> | <%= product.price %>$</div>
+    <div class="product"><div class="product-title"><%= product.name %> | <%= product.price %>$ </div>
       <div></div>
     </li>
+    </div>
   <% end %>
 </ul>
-<%= link_to "Confirm Purchase", cart_path(id: @cart.id) %>
+<div class="confirm-purchase"><%= link_to "Confirm Purchase", cart_path(id: @cart.id), class: "btn btn-info" %> </div>

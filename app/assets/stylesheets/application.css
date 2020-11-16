@@ -13,18 +13,27 @@
  *= require_tree .
  *= require_self
  */
+ .container-body {
+     background-color: #F5F5F5;
+ }
  .topnav {
     border: 1px;
     overflow: hidden;
-    background-color: whitesmoke;
-    height: 70px;
+    height: 97px;
     width: 100%;
+    background-color: black;
 }
 .topnav a { 
     float: right;
-    padding: 1%;
+    padding: 2%;
     padding-right: 5%;
     border-right: groove;
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
+}
+
+.guitar-logo {
+    height: 100%;
+    width: 8%;
+    margin-left: 1%;
 }
