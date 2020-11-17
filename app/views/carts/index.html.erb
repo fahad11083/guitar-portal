@@ -1,14 +1,20 @@
-<div class="inventory-heading"> 
-  <h2>YOUR CART</h2>
-</div>
-<ul class="product-list">
-<% @products.each do |product| %>
-  <div class="products">
-    <li>
-    <div class="product"><div class="product-title"><%= product.name %> | <%= product.price %>$ </div>
-      <div></div>
-    </li>
-    </div>
-  <% end %>
-</ul>
+<% if @products.present? %>
+  <div class="inventory-heading"> 
+    <h2>YOUR CART</h2>
+  </div>
+  <ul class="product-list">
+  <% @products.each do |product| %>
+    <div class="products">
+      <li>
+      <div class="product"><div class="product-title"><%= product.name %> | <%= product.price %>$ </div><div><%= link_to "Remove", cart_path(id: product.id), class: "btn btn-danger white-font", method: :delete %></div>
+        <div></div>
+      </li>
+      </div>
+    <% end %>
+  </ul>
 <div class="confirm-purchase"><%= link_to "Confirm Purchase", cart_path(id: @cart.id), class: "btn btn-info" %> </div>
+<% else %>
+  <div class="inventory-heading"> 
+    <h2>YOUR CART IS EMPTY</h2>
+  </div>
+<% end %>

@@ -6,16 +6,18 @@ class Cart < ApplicationRecord
 
   def self.cart_count(user_id)
     cart = self.find_by(user_id: user_id)
-    cart.products.count
+    cart.products.count if cart.present?
   end
 
   def self.cart_total(user_id)
     cart = self.find_by(user_id: user_id)
-    total = 0
-    products = cart.products
-    products.each do |product|
-      total += product.price
+    if cart.present?
+      total = 0
+      products = cart.products
+      products.each do |product|
+        total += product.price
+      end
+      total
     end
-    total
   end
 end
