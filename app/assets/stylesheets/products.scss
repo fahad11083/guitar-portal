@@ -4,6 +4,7 @@
 
 .products {
   list-style-type: none;
+  color: grey
 }
 .product a {
   text-decoration: none;
@@ -29,15 +30,20 @@
   border-bottom: groove 1px;
   padding: 1%;
   margin: 1%;
+  border-color: #968e8ee3;
   .add-cart-button {
     flex: 1;
   }
   .product-title {
-    flex: 1;
+    flex: 5;
     font-size: 22px;
   }
   .cart-icon {
     font-size:25px
+  }
+  .price {
+    flex: 1;
+    color: rgb(13, 129, 133) !important;
   }
 }
 .confirm-purchase {

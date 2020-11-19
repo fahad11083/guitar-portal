@@ -19,10 +19,10 @@
 
   <body class="container-body">
     <div class="topnav" id="myTopnav">
-    <%= image_tag("guitar-logo.png", class: "guitar-logo") %>
+    <%= image_tag("guitar-logo.jpg", class: "guitar-logo") %>
       <% if user_signed_in? %>
         <a href="/users/sign_out" data-method="delete">Logout</a>
-        <a href="/carts">Checkout | Count: <%= Cart.cart_count(current_user.id) %> Total: <%= Cart.cart_total(current_user.id) %>$</a>
+        <a href="/carts" class="fa fa-shopping-cart cart-icon">  Checkout | Count: <%= Cart.cart_count(current_user.id) %> Total: <%= Cart.cart_total(current_user.id) %>$</a>
         <a href="/users/edit">Profile</a>
       <% else %>
         <a href="/users/sign_in">Sign In</a>

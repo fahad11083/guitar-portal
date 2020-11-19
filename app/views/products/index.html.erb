@@ -5,7 +5,7 @@
   <% @products.each do |product| %>
     <div class="products">
       <li>
-        <div class="product"><div class="product-title"><%= product.name %> | <%= product.price %>$ </div><div class="add-cart-button"> <%= link_to "", product_path(id: product.id), class: "fa fa-shopping-cart cart-icon" %></div>
+        <div class="product"><div class="product-title"><%= product.name %></div><div class="price"> <%= product.price %>$ </div><div class="add-cart-button"> <%= link_to "", product_path(id: product.id), class: "fa fa-shopping-cart cart-icon" %></div>
         <div></div>
       </li>
     </div>
