@@ -24,10 +24,11 @@
 .product {
   display: flex;
   background-color: rgb(255, 255, 255);
+  border: groove black 1px;
   border-bottom: black 1px;
-  height: 100px;
+  height: 230px;
   justify-content: space-between;
-  border-bottom: groove 1px;
+  border-bottom: solid 3px;
   padding: 1%;
   margin: 1%;
   border-color: #968e8ee3;
@@ -44,6 +45,11 @@
   .price {
     flex: 1;
     color: rgb(13, 129, 133) !important;
+  }
+  .product-image {
+    border: groove grey 1px;
+    margin: 1px;
+    margin-right: 2%;
   }
 }
 .confirm-purchase {
