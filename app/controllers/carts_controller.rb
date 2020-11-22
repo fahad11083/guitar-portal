@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
   def index
     @cart = Cart.find_by(user_id: current_user.id)
-    @products = @cart.products
+    @products = @cart.products if @cart.present?
   end
 
   def show

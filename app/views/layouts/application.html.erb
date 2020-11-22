@@ -24,7 +24,12 @@
         <a href="/users/sign_out" data-method="delete">Logout</a>
         <a href="/carts" class="fa fa-shopping-cart cart-icon">  Checkout | Count: <%= Cart.cart_count(current_user.id) %> Total: <%= Cart.cart_total(current_user.id) %>$</a>
         <a href="/users/edit">Profile</a>
+      <% elsif admin_signed_in? %>
+        <a href="/admins/sign_out" data-method="delete">SIGN OUT</a>
+        <a href="products/new">Add Product</a>
       <% else %>
+        <a href="/admins/sign_up">Register Admin</a>
+        <a href="/admins/sign_in">Admin</a>
         <a href="/users/sign_in">Sign In</a>
         <a href="/users/sign_up">Sign Up</a>
       <% end %>

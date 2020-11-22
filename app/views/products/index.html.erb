@@ -5,7 +5,20 @@
   <% @products.each do |product| %>
     <div class="products">
       <li>
-        <div class="product"><div class="product-image"><%= image_tag product.image, style: 'height:200px;width:150px;' %></div><div class="product-title"><%= product.name %></div><div class="price"> <%= product.price %>$ </div><div class="add-cart-button"> <%= link_to "", product_path(id: product.id), class: "fa fa-shopping-cart cart-icon" %></div>
+        <div class="product">
+          <div class="product-image">
+            <%= image_tag product.image, style: 'height:200px;width:150px;' %>
+          </div>
+          <div class="product-title"><%= product.name %></div><div class="price">
+            <%= product.price %>$ 
+          </div>
+          <div class="add-cart-button">
+          <% if current_admin.present? %>
+          <%= link_to "Remove", product_path(id: product.id), class: "btn btn-danger white-font", method: :delete %>
+          <% else %>
+            <%= link_to "", product_path(id: product.id), class: "fa fa-shopping-cart cart-icon" %>
+          <% end %>
+          </div>
         <div></div>
       </li>
     </div>

@@ -1,4 +1,4 @@
-<% if @products.present? %>
+<% if @cart.present? %>
   <div class="inventory-heading"> 
     <h2>YOUR CART</h2>
   </div>
@@ -12,7 +12,10 @@
       </div>
     <% end %>
   </ul>
-<div class="confirm-purchase"><%= link_to "Confirm Purchase", cart_path(id: @cart.id), class: "btn btn-info" %> </div>
+<h3 class="confirm-purchase"> Your Total Amount is Total: <%= Cart.cart_total(current_user.id) %>$</h3>
+<div class="confirm-purchase">
+  <%= link_to "Confirm Purchase", cart_path(id: @cart.id), class: "btn btn-info" %>
+</div>
 <% else %>
   <div class="inventory-heading"> 
     <h2>YOUR CART IS EMPTY</h2>
